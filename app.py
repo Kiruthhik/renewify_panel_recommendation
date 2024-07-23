@@ -58,8 +58,8 @@ class SolarPanelRecommendation(Resource):
         #longitude = float(request.args.get('longitude'))
         #rooftop_space = float(request.args.get('rooftop_space'))
         #power_consumption = float(request.args.get('power_consumption'))
-        rooftop_space = request.args.get('rooftop_space',rooftop_space)
-        power_consumption = request.args.get('power_consumption',power_consumption)
+        rooftop_space = request.args.get('rooftop_space',rooftop_space,type=float)
+        power_consumption = request.args.get('power_consumption',power_consumption,type=float)
 
         start_date = '20230101'
         end_date = '20231230'
